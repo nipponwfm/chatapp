@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat app</title>
+    <link rel="stylesheet" href="/css/access.css">
+</head>
+
+<body>
+    <form action="/chatroom" method="GET">
+        <div>
+            <label for="room">Room:</label><br>
+            <input type="text" id="room" name="room" minlength="6" maxlength="6" size="6"><br>
+            <label for="name">Display name:</label><br>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="10" size="10"><br>
+            <input type="submit" value="Join" id="joinBtn">
+            <p id="error-container"></p>
+        </div>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/access.js"></script>
+</body>
+
+</html>

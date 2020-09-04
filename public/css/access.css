@@ -1,0 +1,65 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #973d97;
+}
+
+form {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 4px 4px 20px black;
+          box-shadow: 4px 4px 20px black;
+  border-radius: 10px;
+  position: relative;
+}
+
+form label {
+  font-size: 22px;
+}
+
+form input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+form input[type='submit'] {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form #error-container {
+  position: absolute;
+  bottom: 80px;
+  color: #9595f6;
+  width: 300px;
+}
+/*# sourceMappingURL=access.css.map */

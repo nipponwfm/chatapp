@@ -1,0 +1,46 @@
+$fontsize:20px;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: $fontsize
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(151, 61, 151)
+}
+form {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 20px black;
+    border-radius: 10px;
+    position: relative;
+    label {
+        font-size: $fontsize + 2px
+    }
+    input {
+        width: 300px;
+        height: 40px;
+        margin-bottom: 20px;
+        padding-left: 10px
+    }
+    input[type='submit'] {
+        margin-top: $fontsize;
+        cursor: pointer;
+    }
+    #error-container {
+        position: absolute;
+        bottom: 80px;
+        color: rgb(149, 149, 246);
+        width: 300px;
+    }
+}

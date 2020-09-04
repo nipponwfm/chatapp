@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat app</title>
+    <link rel="stylesheet" href="/css/chatroom.css">
+</head>
+
+<body>
+    <div id="sidebar-field">
+    </div>
+    <div id="message-field">
+        <div id="message-container"></div>
+        <div id="message-send">
+            <textarea id="messageInput" placeholder="message..."></textarea>
+            <input type="submit" id="sendBtn" value="Send">
+        </div>
+    </div>
+    <div id="feature-field">
+        <span class="feature" id="sendLocation">Send location</span>
+        <span class="feature" id="">Import file</span>
+        <span class="feature" id="">Feedback</span>
+        <span class="feature" id="">Setting</span>
+    </div>
+    <!-- templates -->
+    <script id="user-template" type="text/html">
+        <div id="title">
+            <p>Room: <p style="text-align: center">{{room}}</p></p>
+            <p>Users:</p>
+        </div>
+        <div id="user">
+            {{#user}}
+            <li>{{name}}</li>
+            {{/user}}
+        </div>
+    </script>
+    <script id="message-template" type="text/html">
+        <div class="messageBubble">
+            <p class="username">{{name}}</p>
+            <p class="message">
+                {{message}}
+                <span class="tooltip">{{time}}</span>
+            </p>
+        </div>
+    </script>
+    <script id="location-template" type="text/html">
+        <div class="messageBubble">
+            <p class="username">{{name}} - {{time}}</p>
+            <p class="message">
+                <span class="tooltip">{{time}}</span>
+                <a href={{message}} target="_blank">Location</a>
+            </p>
+        </div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+        integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+        crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chatroom.js"></script>
+    <script></script>
+</body>
+
+</html>
